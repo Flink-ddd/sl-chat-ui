@@ -9,56 +9,49 @@
           </head-image>
         </div>
 
-        <el-menu background-color="#333333" text-color="#ddd" style="margin-top: 10px;">
-          <el-menu-item title="聊天">
-            <router-link v-bind:to="'/home/chat'">
-              <i class="operate-icon icon-message-list"/>
-              <div v-show="unreadCount>0" class="unread-text">{{ unreadCount }}</div>
-            </router-link>
-          </el-menu-item>
-          <el-menu-item v-if="accountType!=1" title="好友">
-            <router-link v-bind:to="'/home/friend'">
-              <i class="operate-icon icon-friend-list"/>
-            </router-link>
-          </el-menu-item>
-          <!-- <el-menu-item v-if="accountType!=1" title="好友申请">
-            <router-link v-bind:to="'/home/friendApply'">
-              <i class="operate-icon icon-friend-apply-list"/>
-            </router-link>
-          </el-menu-item> -->
-          <el-menu-item v-if="accountType!=1" title="群聊">
-            <router-link v-bind:to="'/home/group'">
-              <i class="operate-icon icon-group-list"/>
-            </router-link>
-          </el-menu-item>
-          
-          
+       <el-menu background-color="#e8e5e5" text-color="#ddd" style="margin-top: 10px;">
+                 <el-menu-item title="聊天">
+                   <router-link v-bind:to="'/home/chat'">
+                     <i class="operate-icon icon-message-list"/>
+                     <div v-show="unreadCount>0" class="unread-text">{{ unreadCount }}</div>
+                   </router-link>
+                 </el-menu-item>
+                 <el-menu-item v-if="accountType!=1" title="好友">
+                   <router-link v-bind:to="'/home/friend'">
+                     <i class="operate-icon icon-friend-list"/>
+                   </router-link>
+                 </el-menu-item>
+                 <el-menu-item v-if="accountType!=1" title="好友申请">
+                   <router-link v-bind:to="'/home/friendApply'">
+                     <i class="operate-icon icon-friend-apply-list"/>
+                   </router-link>
+                 </el-menu-item>
+                 <el-menu-item v-if="accountType!=1" title="群聊">
+                   <router-link v-bind:to="'/home/group'">
+                     <i class="operate-icon icon-group-list"/>
+                   </router-link>
+                 </el-menu-item>
+                 <el-menu-item v-if="accountType!=1" title="广场" @click="testClick">
+                   <router-link v-bind:to="'/home/dynamic'">
+                     <i class="operate-icon icon-dynamic-list"/>
+                   </router-link>
+                 </el-menu-item>
 
-          <!-- <el-menu-item title="Github">
-            <div class="operate-icons">
-              <a
-                  href="https://github.com/pisces-hub/muchat"
-                  target="_blank"
-                  title="Github"
-              >
-                <i class="operate-icon icon-github"/>
-              </a>
-            </div>
-          </el-menu-item>
 
-          <el-menu-item title="码云">
-            <div class="operate-icons">
-              <a
-                  href="https://gitee.com/pisces-hub/muchat"
-                  target="_blank"
-                  title="Gitee"
-              >
-                <i class="operate-icon icon-gitee"/>
-              </a>
-            </div>
-          </el-menu-item> -->
+                 <el-menu-item title="Github">
+                   <div class="operate-icons">
+                     <a
+                         href="https://github.com/Flink-ddd/sl-chat-ui"
+                         target="_blank"
+                         title="Github"
+                     >
+                       <i class="operate-icon icon-github"/>
+                     </a>
+                   </div>
+                 </el-menu-item>
 
-        </el-menu>
+
+               </el-menu>
         <div class="exit-box" @click="handleExit()" title="退出">
           <i class="operate-icon icon-exit"/>
         </div>
